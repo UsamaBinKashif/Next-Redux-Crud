@@ -6,8 +6,8 @@ import { login } from "redux/authSlice";
 const Login = () => {
   const dispatch = useDispatch();
 
-  const [email, setEmail] = useState(null);
-  const [password, setPassword] = useState(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
