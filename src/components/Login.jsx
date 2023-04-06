@@ -24,7 +24,7 @@ const Login = () => {
     <div className="video w-full  relative h-screen">
       <div className="absolute w-full h-full"></div>
       <video
-        src="/earth.mp4"
+        src="assets/earth.mp4"
         autoPlay
         loop
         muted
