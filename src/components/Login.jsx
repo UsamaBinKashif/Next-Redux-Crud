@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { login } from "redux/authSlice";
+import { login } from "../../redux/actions";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -33,7 +33,7 @@ const Login = () => {
       <div className="absolute w-full h-full bottom-0 flex flex-col justify-center items-center text-white">
         <div className=" p-10 rounded ">
           <div className="flex flex-col text-center  ">
-            <h1 className="sm:text-4xl text-2xl font-medium title-font mb-4 tracking-[2px] ">
+            <h1 className="sm:text-4xl text-2xl font-medium title-font mb-4 tracking-[2px] text-white ">
               EARTH
             </h1>
           </div>

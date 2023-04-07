@@ -1,7 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { login, logout } from "./actions";
 import { toast } from "react-toastify";
 
-// Define initial state
+
 const initialState = {
   users: [
     { email: "usama@gmail.com", password: "password1" },
@@ -12,12 +12,9 @@ const initialState = {
   isLoggedIn: false,
 };
 
-// Create a slice of the store with a name and initial state
-const authSlice = createSlice({
-  name: "auth",
-  initialState,
-  reducers: {
-    login: (state, action) => {
+const authReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case login: {
       const { email, password } = action.payload;
       const user = state.users.find(
         (u) => u.email === email && u.password === password
@@ -30,8 +27,7 @@ const authSlice = createSlice({
           progress: undefined,
           theme: "dark",
         });
-        state.user = user;
-        state.isLoggedIn = true;
+        return { ...state, user: user, isLoggedIn: true };
       } else {
         toast.error("USER NOT FOUND", {
           position: "bottom-right",
@@ -41,17 +37,17 @@ const authSlice = createSlice({
           progress: undefined,
           theme: "dark",
         });
-        state.user = null;
-        state.isLoggedIn = false;
+        return { ...state, user: null, isLoggedIn: false };
       }
-    },
-    logout: (state) => {
-      state.user = null;
-      state.isLoggedIn = false;
-    },
-  },
-});
+    }
 
-// Export the actions and reducer as separate entities
-export const { login, logout } = authSlice.actions;
-export default authSlice.reducer;
+    case logout: {
+      return { ...state, user: null, isLoggedIn: false };
+    }
+
+    default: {
+      return state;
+    }
+  }
+};
+export default authReducer;
