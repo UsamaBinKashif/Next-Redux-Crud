@@ -11,13 +11,7 @@ const Login = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-
-    dispatch(
-      login({
-        email,
-        password,
-      })
-    );
+    dispatch({ type: login, payload: { email, password } });
   };
 
   return (
@@ -53,7 +47,6 @@ const Login = () => {
                     name="email"
                     value={email}
                     placeholder="YOUR EMAIL HERE..."
-                    
                     required
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white  text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"

@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import HomePage from "@/components/HomePage";
 
 export default function Home() {
-  const isLoggedIn = useSelector((state) => state.isLoggedIn);
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   return (
     <>
       <Head>

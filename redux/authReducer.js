@@ -42,6 +42,13 @@ const authReducer = (state = initialState, action) => {
     }
 
     case logout: {
+      toast.info("LOGGED OUT", {
+        position: "bottom-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        progress: undefined,
+        theme: "dark",
+      });
       return { ...state, user: null, isLoggedIn: false };
     }
 

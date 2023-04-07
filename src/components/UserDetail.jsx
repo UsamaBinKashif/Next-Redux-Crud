@@ -2,10 +2,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "redux/actions";
 
 const UserDetail = () => {
-  const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.auth.user);
   const dispatch = useDispatch();
   const handleLogout = () => {
-    dispatch(logout());
+    dispatch({ type: logout });
   };
   return (
     <>
@@ -18,7 +18,10 @@ const UserDetail = () => {
             <h1 className="sm:text-2xl text-xl font-medium  text-white">
               {user.email}
             </h1>
-            <button onClick={handleLogout} className=" tracking-[2px] text-white bg-hara-rang border-0 py-1 px-8  hover:bg-opacity-70 rounded text-lg">
+            <button
+              onClick={handleLogout}
+              className=" tracking-[2px] text-white bg-hara-rang border-0 py-1 px-8  hover:bg-opacity-70 rounded text-lg"
+            >
               LOGOUT
             </button>
           </div>
