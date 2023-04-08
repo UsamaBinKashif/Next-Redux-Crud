@@ -1,7 +1,6 @@
 import { login, logout } from "./actions";
 import { toast } from "react-toastify";
 
-
 const initialState = {
   users: [
     { email: "usama@gmail.com", password: "password1" },
@@ -29,7 +28,7 @@ const authReducer = (state = initialState, action) => {
         });
         return { ...state, user: user, isLoggedIn: true };
       } else {
-        toast.error("USER NOT FOUND", {
+        toast.error("INCORRECT EMAIL OR PASSWORD!", {
           position: "bottom-right",
           autoClose: 2000,
           hideProgressBar: false,

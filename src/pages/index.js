@@ -21,7 +21,7 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-      <main>{isLoggedIn === true ? <HomePage /> : <Login />}</main>
+      <main className="" >{isLoggedIn === true ? <HomePage /> : <Login />}</main>
     </>
   );
 }

@@ -18,12 +18,17 @@ const UserDetail = () => {
             <h1 className="sm:text-2xl text-xl font-medium  text-white">
               {user.email}
             </h1>
-            <button
-              onClick={handleLogout}
-              className=" tracking-[2px] text-white bg-hara-rang border-0 py-1 px-8  hover:bg-opacity-70 rounded text-lg"
-            >
-              LOGOUT
-            </button>
+            <span className="space-x-4">
+              <button
+                onClick={handleLogout}
+                className=" tracking-[2px] text-white bg-hara-rang border-0 py-1 px-4  hover:bg-opacity-70 rounded text-base"
+              >
+                LOGOUT
+              </button>
+              <button className="tracking-[2px] text-white bg-blue-500 border-0 py-1 px-4  hover:bg-opacity-70 rounded text-base">
+                ADD TASK
+              </button>
+            </span>
           </div>
         </div>
       </section>

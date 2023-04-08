@@ -49,7 +49,7 @@ const Login = () => {
                     placeholder="YOUR EMAIL HERE..."
                     required
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white  text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-hara-rang focus:bg-white  text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
               </div>
@@ -69,7 +69,7 @@ const Login = () => {
                     required
                     placeholder="*******"
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-green-500 focus:bg-white text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-hara-rang focus:bg-white text-base outline-none text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
               </div>
@@ -77,7 +77,7 @@ const Login = () => {
               <div className="p-2 ">
                 <button
                   type="submit"
-                  className=" mx-auto tracking-[2px] text-white bg-green-600 border-0 py-2 px-8  hover:bg-opacity-70 rounded text-lg "
+                  className=" mx-auto tracking-[2px] text-white bg-hara-rang border-0 py-2 px-8  hover:bg-opacity-70 rounded text-lg "
                 >
                   LOGIN TO EARTH
                 </button>
