@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { login } from "../../redux/actions";
+import { login } from "../../redux/actions/actions";
 
 const Login = () => {
   const dispatch = useDispatch();

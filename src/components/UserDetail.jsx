@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
-import { logout } from "redux/actions";
+import { logout } from "redux/actions/actions";
 
 const UserDetail = () => {
   const user = useSelector((state) => state.auth.user);
@@ -25,9 +26,9 @@ const UserDetail = () => {
               >
                 LOGOUT
               </button>
-              <button className="tracking-[2px] text-white bg-blue-500 border-0 py-1 px-4  hover:bg-opacity-70 rounded text-base">
+              <Link href="/add-task" className="tracking-[2px] text-white bg-blue-500 border-0 py-1 px-4  hover:bg-opacity-70 rounded text-base">
                 ADD TASK
-              </button>
+              </Link>
             </span>
           </div>
         </div>

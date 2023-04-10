@@ -1,4 +1,4 @@
-import { login, logout } from "./actions";
+import { login, logout } from "../actions/actions";
 import { toast } from "react-toastify";
 
 const initialState = {
